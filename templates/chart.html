@@ -1,0 +1,24 @@
+{% load static %}
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>A</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script type="text/javascript" src="{% static "fusioncharts/fusioncharts.js" %}"></script>
+
+<script type="text/javascript" src="http://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+<script type="text/javascript" src="http://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+
+</head>
+<body>
+
+<h3>FusionChart</h3>
+<div id="chartContainer">{{ output|safe }}</div>
+
+</body>
+</html>

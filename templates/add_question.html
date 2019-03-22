@@ -1,0 +1,51 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ADD</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'survey/css/style.css' %}">
+</head>
+<body>
+ <header>
+        <nav class="navbar navbar-light" style="background-color: #343a40;">
+            <div class="container">
+               <h4 style="color:#fff; ">Welcome {{request.user.username}}</h4>
+            </div>
+</nav>
+    </header>
+<div class="small_div">
+
+<div class="container">
+    <br>
+    <h2>ADD Question</h2>
+    <hr>
+
+    <form action="/create">
+
+
+            {%  csrf_token %}
+            
+            <label class="form-group" for="name">Title: </label>
+            <input class="form-control" type="text" name="name" required="True"><br>
+
+            <label class="form-group" for="content">Content: </label>
+            <input class="form-control" type="text" name="content" required="True"><br>
+
+            <input class="btn btn-success" type="submit" value="Create">
+
+
+        </form>
+        <br>
+
+
+</div>
+</div>
+
+</body>
+</html>
