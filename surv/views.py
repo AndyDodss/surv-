@@ -8,7 +8,6 @@ from django.contrib.auth import login, authenticate
 from collections import OrderedDict
 
 from .fusioncharts import FusionCharts
-from .video import func
 import regex as re
 
 

@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dbef9e5-591b-48a3-a87e-5f2e45888037" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/deploy/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/surv/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/surv/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/surv/video.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/surv/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/surv/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/surv/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="215" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -361,11 +355,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/surv/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="215" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
