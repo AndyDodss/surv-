@@ -20,4 +20,3 @@ class Ans(models.Model):
 
     def __str__(self):
         return "SurvBetter"
-
