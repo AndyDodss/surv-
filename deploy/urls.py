@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-   path('', include('surv.urls')),
+    path('', include('surv.urls')),
     #singelton : only this app exist
     #path('', RedirectView.as_view(url='/surv/', permanent=True)),
 ] # static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

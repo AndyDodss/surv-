@@ -213,24 +213,7 @@ def home(request):
     return render(request, 'home.html')
 
 
-def scann(request):
-    url = func()
-    split = re.findall(r'[a-z]*=[0-9]*', str(url))
-    dict = {}
-    for i in split:
-        a = i.split('=')
-        dict[a[0]] = a[1]
-    # return HttpResponse(dict)
-    # return redirect(str(link))
-    questions = Ask.objects.all()
-    answers = Ans.objects.all()
 
-    context = {
-        'questions': questions,
-        'answers': answers,
-        'dict': dict
-    }
-    return render(request, 'Ans.html', context)
 
 
 def chart(request):
