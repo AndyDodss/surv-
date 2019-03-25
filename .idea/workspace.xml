@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6dbef9e5-591b-48a3-a87e-5f2e45888037" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/deploy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/surv/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/surv/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/surv/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/surv/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deploy/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+            <state relative-caret-position="-1190">
+              <caret line="28" column="52" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -371,8 +369,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/deploy/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+        <state relative-caret-position="-1190">
+          <caret line="28" column="52" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
         </state>
       </provider>
     </entry>
