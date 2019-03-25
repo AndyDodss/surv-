@@ -4,4 +4,4 @@ from django.contrib import admin
 from .models import Ask,Ans
 
 admin.site.register(Ask)
-admin.site.registAer(Ans)
+admin.site.register(Ans)
