@@ -15,8 +15,8 @@ urlpatterns = [
     re_path(r'^/testall', views.testall, name='test' ),
     re_path(r'^test', views.group, name='group' ),
     re_path(r'^/test', views.group, name='group' ),
-    #path('', views.home, name='home'),
+    path('', views.home, name='home'),
  #   path('scann', views.scann, name='scann'),
-    path('count', views.count, name='count' ),
+ #   path('count', views.count, name='count' ),
     path('chart', views.chart, name='chart'),
 ]
