@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6dbef9e5-591b-48a3-a87e-5f2e45888037" name="Default Changelist" comment="" />
+    <list default="true" id="6dbef9e5-591b-48a3-a87e-5f2e45888037" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/surv/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/surv/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +21,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/surv/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
@@ -31,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/surv/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state relative-caret-position="442">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
             </state>
           </provider>
         </entry>
@@ -117,12 +119,12 @@
       <list>
         <option value="$PROJECT_DIR$/runtime.txt" />
         <option value="$PROJECT_DIR$/deploy/wsgi.py" />
-        <option value="$PROJECT_DIR$/surv/views.py" />
         <option value="$PROJECT_DIR$/surv/urls.py" />
         <option value="$PROJECT_DIR$/surv/models.py" />
         <option value="$PROJECT_DIR$/surv/admin.py" />
         <option value="$PROJECT_DIR$/deploy/settings.py" />
         <option value="$PROJECT_DIR$/deploy/urls.py" />
+        <option value="$PROJECT_DIR$/surv/views.py" />
       </list>
     </option>
   </component>
@@ -342,13 +344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/surv/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/surv/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -401,6 +396,13 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/surv/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
         </state>
       </provider>
     </entry>
