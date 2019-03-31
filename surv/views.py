@@ -56,15 +56,15 @@ def ans(request):
 
 def login_check(request):
     if request.user.is_superuser == 0:
-          return HttpResponse(request.user.is_superuser)
-       # return redirect('ans')
+       #   return HttpResponse(request.user.is_superuser)
+        return redirect('ans')
 
 
     else:
-        return HttpResponse(request.user.is_superuser)
+      #  return HttpResponse(request.user.is_superuser)
 
         # return HttpResponse("admin page")
-       # return index(request)
+        return index(request)
 
 
 def register(request):
