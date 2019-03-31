@@ -56,8 +56,8 @@ def ans(request):
 
 def login_check(request):
     if request.user.is_superuser == 0:
-        #  return HttpResponse(request.user.id)
-        return redirect('ans')
+          return HttpResponse(request.user.id)
+       # return redirect('ans')
 
 
     else:
