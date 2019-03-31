@@ -1,0 +1,79 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="cs.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light" style="background-color: #343a40;">
+            <div class="container">
+               <h4 style="color:#fff; ">Welcome {{request.user.username}}</h4>
+            </div>
+</nav>
+    </header>
+   <div class="container"><br>
+
+{% if dict  %}
+
+       <h3>Survey about</h3>
+       <h6>Place :{{dict.place}}</h6>
+       <h6>Branch:{{dict.branch}} </h6>
+       <h6>Server :{{dict.server}}</h6>
+{% endif %}
+        <hr>
+        <table class="table table-dark">
+
+        <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>content</th>
+                    <th>Rate A</th>
+                    <th>Rate B</th>
+                    <th>Rate C</th>
+                    <th>Rate D</th>
+                    <th>Rate E</th>
+                </tr>
+            </thead>
+            <tbody>
+
+         {% for question in questions %}
+
+                 {% ifequal question.is_visible True %}
+                
+
+                    <tr>
+                    <form method="POST" action="answer">
+                        {%  csrf_token %}
+
+                    <td>{{ question.name }}</td>
+                    <td>{{ question.content }}</td>
+                    <td> <input type="radio" name="rate" value="1"></td>
+                    <td> <input type="radio" name="rate" value="2"></td>
+                    <td> <input type="radio" name="rate" value="3"></td>
+                    <td> <input type="radio" name="rate" value="4"></td>
+                    <td> <input type="radio" name="rate" value="5"></td>
+                    <td> <input type="hidden" name="question_id" value="{{question.id}}"></td>
+                    <td> <input type="hidden" name="user_id" value="{{request.user.id}}"></td>
+                   <td> <input class="btn btn-success active" type="submit" value="choose"></td>
+                    </form>
+                    </tr>
+
+                {% endifequal %}
+
+                {% endfor %}
+
+            </tbody>
+        </table>
+
+    </div>
+ 
+</body>
+</html>

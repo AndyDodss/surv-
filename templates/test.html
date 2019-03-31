@@ -1,0 +1,125 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="cs.css">
+</head>
+<body>
+ <header>
+        <nav class="navbar navbar-light" style="background-color: #343a40;">
+            <div class="container">
+               <h4 style="color:#fff; ">Welcome {{request.user.username}}</h4>
+            </div>
+</nav>
+    </header>
+    <div class="container"><br>
+      <h2><a href="myadmin"><button type="button" class="btn btn-dark">Survey</button>
+        <a href="test"><button type="button" class="btn btn-dark">Survey Details</button></a>
+      <a href="/testall"><button type="button" class="btn btn-dark">User Details</button></a>  </h2>
+        <hr>
+
+
+
+
+
+
+ <table class="table table-dark">
+            <thead>
+                <tr>
+                  
+                    <th>Title</th>
+                    <th>Question</th>
+                    <th>Counts Rate A</th>
+                    <th>Counts Rate B</th>
+                    <th>Counts Rate C</th>
+                    <th>Counts Rate D</th>
+                    <th>Counts Rate E</th>
+                    <th>Average</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                {% for value in mydict.values %}
+
+                    <tr>
+                   
+                    <td>{{ value.0}}</td>
+                    <td>{{ value.6}}</td>
+                    <td>{{ value.1}}</td>
+                    <td>{{ value.2}}</td>
+                    <td>{{ value.3}}</td>
+                    <td>{{ value.4}}</td>
+                    <td>{{ value.5}}</td>
+                    <td>{{ value.7}}</td>
+                  
+
+                    
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+        </table>
+
+
+
+
+<!-- 
+
+
+
+        {% for value in mydict.values %}
+
+        <h3>counts rata A for this question {{value.0}} :  {{value.1}}</h3>
+         
+        {% endfor %}
+    
+
+
+
+
+
+
+
+
+
+         <table class="table" style="width: 800px; text-align: center;">
+              {% for question in questions %}
+            <thead>
+                <tr>
+                    <th colspan="2">{{ question.content }}</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for answer in answers %}
+                   {% ifequal question.id answer.Question_id.id %}
+              
+
+                    <tr>
+                   
+                    <td style="text-align: center;">{{ answer.user_id.username}}</td>
+                    <td>{{ answer.rate }}</td>
+                    
+                   </tr>
+                    {% endifequal %}
+
+                {% endfor %}
+
+            </tbody>
+            {%endfor%}
+        </table>
+        
+    </div>
+
+</body>
+</html>
+
+
