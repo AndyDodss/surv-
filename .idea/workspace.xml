@@ -2,92 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c669d797-0875-4c8e-a10a-a8686ef1b288" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2019-03-24 (2).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2019-03-24 (3).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2019-03-24 (4).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2019-03-24 (5).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2019-03-24 (6).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2019-03-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fusioncharts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/fusioncharts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/migrations/0002_auto_20190310_1119.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/migrations/0003_auto_20190310_1455.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/migrations/0004_auto_20190311_1217.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/migrations/0005_ask_is_visible.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/no.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/css/mystyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/fusioncharts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/fusioncharts.charts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/fusioncharts.gantt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/fusioncharts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/fusioncharts.maps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/fusioncharts.overlappedbar2d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/fusioncharts.overlappedcolumn2d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/fusioncharts.powercharts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/fusioncharts.timeseries.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/fusioncharts.treemap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/fusioncharts.vml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/fusioncharts.widgets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/fusioncharts.zoomline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/fusioncharts.zoomscatter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/maps/fusioncharts.usa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/maps/fusioncharts.world.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/maps/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/themes/fusioncharts.theme.candy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/themes/fusioncharts.theme.carbon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/themes/fusioncharts.theme.fint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/themes/fusioncharts.theme.fusion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/themes/fusioncharts.theme.gammel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/themes/fusioncharts.theme.ocean.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/static/js/themes/fusioncharts.theme.zune.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/video.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/survey/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Ans.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/add_question.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/chart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/group.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/registration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/testall.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/survey/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/survey/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/task/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/task/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,13 +14,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/survey/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/survey/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/survey/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,6 +86,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/task/settings.py" />
+        <option value="$PROJECT_DIR$/task/__init__.py" />
+        <option value="$PROJECT_DIR$/survey/models.py" />
       </list>
     </option>
   </component>
@@ -235,9 +206,50 @@
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/survey/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/survey/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/survey/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
