@@ -146,13 +146,15 @@ def group(request):
             key = mylist[0]
             # del mylist[0]
             avg = mylist[1:6]
+            pw = 0
             sum = 0
             for i in range(5):
-                sum = sum + mylist[i + 1] * i + 1
-            if sum / 5 > 5:
+                sum = sum + mylist[i + 1]
+                pw =pw + mylist[i + 1] * i + 1
+            if pw / 5 > sum:
                 mylist[7] = 5;
             else:
-                mylist[7] = sum / 5
+                mylist[7] = pw / sum
             new = {key: mylist}
             mydict.update(new)
 
