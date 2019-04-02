@@ -154,7 +154,7 @@ def group(request):
             if pw / 5 > sum:
                 mylist[7] = 5;
             else:
-                mylist[7] = pw / sum
+                mylist[7] = round(pw / sum,2)
             new = {key: mylist}
             mydict.update(new)
 
