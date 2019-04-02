@@ -18,5 +18,5 @@ urlpatterns = [
     path('', views.home, name='home'),
  #   path('scann', views.scann, name='scann'),
  #   path('count', views.count, name='count' ),
-    path('chart', views.chart, name='chart'),
+
 ]
