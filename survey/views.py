@@ -1,5 +1,7 @@
 from django.shortcuts import render,redirect
-from . models import Ask,Ans
+
+from survey.models import Source
+from . models import *
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
@@ -216,11 +218,18 @@ def scann(request):
     #return redirect(str(link))
     questions = Ask.objects.all()
     answers = Ans.objects.all()
+    S=Source.objects.get(pk=1)
+    W=Waiters.objects.get(pk=1)
+    B=Branch.objects.get(pk=1)
+
 
     context = {
         'questions': questions,
         'answers': answers,
-        'dict' : dict
+        'dict' : dict,
+        'source': S,
+        'waiter:': W,
+        'branch': B
     }
     return render(request,'Ans.html',context)
 

@@ -1,5 +1,7 @@
 from django.urls import re_path ,path,include
 from . import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     re_path(r'^myadmin', views.index, name='index' ),
@@ -20,4 +22,4 @@ path('scann', views.scann, name='scann'),
     path('count', views.count, name='count' ),
     path('chart', views.chart, name='chart'),
 
-]
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

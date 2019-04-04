@@ -1,17 +1,21 @@
 from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
+
+
+
+
 class Source(models.Model):
-    SName=models.TextField()
-    Logo=models.ImageField()
+    SName=models.CharField(max_length=150)
+    Logo=models.ImageField(upload_to= 'pictures/Source_logos/',blank=False)
 class Branch(models.Model):
-    BName=models.TextField()
+    BName=models.CharField(max_length=150)
     Source_fk=models.ForeignKey(Source,on_delete=models.CASCADE,default=None)
     Num_waiters=models.IntegerField()
 class Waiters(models.Model):
-    W_Name=models.TextField()
+    W_Name=models.CharField(max_length=150)
     Branch_fk=models.ForeignKey(Branch,on_delete=models.CASCADE,default=None)
-    W_photo=models.ImageField()
+    W_photo=models.ImageField(upload_to= 'pictures/waiters_photos/',blank=False)
 
 class Ask(models.Model):
 
@@ -24,12 +28,12 @@ class Ask(models.Model):
 
 class Ans(models.Model):
     user_id = models.ForeignKey(User,on_delete=models.CASCADE,default=None)
-    done = models.BooleanField()
+   # done = models.BooleanField()
     rate = models.CharField(max_length = 1)
-    Answer_comment=models.TextField()
+    Answer_comment=models.TextField(default=None)
     Waiter_fk=models.ForeignKey(Waiters,on_delete=models.CASCADE,default=None)
-    Time=models.TimeField()
-    Date=models.DateField()
+    Time=models.TimeField(blank=False,default=None)
+    Date=models.DateField(blank=False,default=None)
     #Time_Date=models.DateTimeField()
     Question_id=models.ForeignKey(Ask,on_delete=models.CASCADE,default=None)
    
