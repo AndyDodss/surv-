@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect
+from numpy import ushort
 
 from survey.models import Source
 from . models import *
@@ -45,12 +46,19 @@ def testall(request):
 def ans(request):
     questions=Ask.objects.all()
     answers=  Ans.objects.all()
-    
+    S = Source.objects.get(pk=1)
+    W=Waiters.objects.get(pk=1)
+    B=Branch.objects.get(pk=1)
     context = {
-            'questions' : questions ,
-            'answers' : answers
+            'questions': questions ,
+            'answers': answers,
+            'source': S,
+            'waiter': W,
+            'branch': B,
+
           }
     return render(request,'Ans.html' ,context)
+
 
 def login_check(request):
     if request.user.is_superuser == 0 :  
@@ -218,21 +226,33 @@ def scann(request):
     #return redirect(str(link))
     questions = Ask.objects.all()
     answers = Ans.objects.all()
-    S=Source.objects.get(pk=1)
-    W=Waiters.objects.get(pk=1)
-    B=Branch.objects.get(pk=1)
-
-
     context = {
         'questions': questions,
         'answers': answers,
         'dict' : dict,
-        'source': S,
-        'waiter:': W,
-        'branch': B
+
     }
     return render(request,'Ans.html',context)
+def thanks (request):
+    return render(request,'Thanks.html')
+def signup(request):
+     # if request.method == 'POST':
+        # fname=request.POST.get('inputName')
+        # lname=request.POST.get('inputName')
+        #
+        # email = request.POST.get('inputEmail')
+        # pword = request.POST.get('inputPassword')
+        # phone_num = request.POST.get('phone_number')
+        # gift=True
+        #
+        # user=person(first_name=fname,last_name=lname,phone_number=phone_num,Email=email,password=pword,incentive=gift)
+        # user.save()
+        return HttpResponse ("you sign up ,thanks")
+    # else:
+    #     return render(request,'signup.html')
 
+def tosignup(request):
+    return render(request, 'signup.html')
 
 
 

@@ -2,9 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
 
-
-
-
+class person(models.Model):
+    first_name=models.CharField(max_length=150)
+    last_name=models.CharField(max_length=150)
+    phone_number=models.CharField(max_length=20)
+    Email=models.EmailField()
+    password=models.CharField(max_length=150)
+    incentive=models.BooleanField(default=False)
 class Source(models.Model):
     SName=models.CharField(max_length=150)
     Logo=models.ImageField(upload_to= 'pictures/Source_logos/',blank=False)

@@ -20,10 +20,7 @@
 </nav>
     </header>
    <div class="container"><br>
-       {% if source %}
-        koko= {{source.Logo}}
-       <img src={{source.Logo.url}}>
-       {% endif %}
+
 <!--{% if dict  %}-->
 
        <!--<h3>Survey about</h3>-->
@@ -32,6 +29,13 @@
        <!--<h6>Server :{{dict.server}}</h6>-->
 <!--{% endif %}-->
         <hr>
+        {% if source %}
+
+       <img src="{{source.Logo.url}}" height="100" width="100">
+       <img src="{{waiter.W_photo.url}}" height="100" width="100">
+       <h1>{{branch.BName}}</h1>
+
+       {% endif %}
         <table class="table table-dark">
 
         <thead>
@@ -75,7 +79,7 @@
 
             </tbody>
         </table>
-
+           <a class="btn btn-success" href="/thanks">Submit</a>
     </div>
  
 </body>

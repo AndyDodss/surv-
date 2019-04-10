@@ -34,11 +34,15 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'survey'
+    'social_django',
+
+
 ]
 
 MIDDLEWARE = [
@@ -125,4 +129,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/login_check'
 MEDIA_URL='/media/'
-MEDIA_ROOT='media'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')

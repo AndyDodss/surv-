@@ -1,6 +1,7 @@
 from django.urls import re_path ,path,include
 from . import views
 from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 
 urlpatterns = [
@@ -12,6 +13,9 @@ urlpatterns = [
     path('login_check', views.login_check, name='login_check' ),
     path('answer',views.answer,name='answer'),
     path('ans', views.ans, name='ans' ),
+    path('thanks', views.thanks, name='thanks' ),
+    path('signup', views.signup, name='signup' ),
+    path('tosignup', views.tosignup, name='tosignup' ),
     re_path(r'^testall', views.testall, name='test' ),
     re_path(r'^/testall', views.testall, name='test' ),
     re_path(r'^test', views.group, name='group' ),
@@ -22,4 +26,6 @@ path('scann', views.scann, name='scann'),
     path('count', views.count, name='count' ),
     path('chart', views.chart, name='chart'),
 
-]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+]
+urlpatterns+=staticfiles_urlpatterns()
+urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
