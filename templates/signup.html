@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+
+    <link rel="stylesheet" href="cs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1″>
+
+<link rel="stylesheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+ <link rel="stylesheet" href="main.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+ <header>
+        <nav class="navbar navbar-light" style="background-color: #343a40;">
+            <div class="container">
+               <h4 style="color:#fff; ">Welcome {{request.user.username}}</h4>
+            </div>
+</nav>
+    </header>
+
+
+
+ <div class="container" align="center">
+
+ <div class="row">
+
+   <div class="col-md-3″></div>
+
+   <div class="col-md-5″>
+
+
+
+   <hr>
+
+<form method="POST" action="/signup" >
+{%  csrf_token %}
+
+
+<div class="form-group">
+
+       <label for="inputName">FirstName</label>
+
+       <input type="text" class="form-control" id="inputName" placeholder="Name">
+
+   </div>
+
+<div class="form-group">
+
+       <label for="inputLastName">LastName</label>
+
+       <input type="text" class="form-control" id="inputLastName" placeholder="LastName">
+
+   </div>
+
+   <div class="form-group">
+
+       <label for="inputEmail">Email</label>
+       <input type="Email" class="form-control" id="inputEmail" placeholder="Email">
+
+   </div>
+
+   <div class="form-group">
+
+       <label for="inputPassword">Password</label>
+
+       <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+
+   </div>
+
+ <div class="form-group">
+
+       <label for="inputrePassword">Retype Password</label>
+
+       <input type="password" class="form-control" id="inputrePassword" placeholder="Retype Password">
+
+   </div>
+    <div class="form-group">
+
+       <label for="phone_number">Phone</label>
+
+       <input type="email" class="form-control" id="phone_number" placeholder="Phone">
+
+   </div>
+
+
+
+        <input class="btn btn-success active" type="submit" value="Register">
+
+</form>
+
+
+</div>
+
+</div>
+
+ </div>
+</body>
+
+</html>
