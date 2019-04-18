@@ -22,6 +22,8 @@ urlpatterns = [
     path('thanks', views.thanks, name='thanks'),
     path('signup', views.signup, name='signup'),
     path('tosignup', views.tosignup, name='tosignup'),
+    path('login', views.login, name='login'),
+    path('tologin', views.tologin, name='tologin'),
  #   path('count', views.count, name='count' ),
 
     re_path(r'^(?P<qr>[a-z]*[0-9]*)/place=((?P<place>[0-9]))&branch=((?P<branch>[0-9]))&server=((?P<waiter>[0-9]))', views.scann_info, name='scann'),

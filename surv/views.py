@@ -12,7 +12,7 @@ import regex as re
 
 # Create your views here.
 def index(request):
-    questions = Ask.objects.all()
+    questions = Ask.objects.get()
     context = {
         'questions': questions
     }
@@ -55,12 +55,12 @@ def ans(request):
 
 def login_check(request):
     if request.user.is_superuser == 0:
-       #   return HttpResponse(request.user.is_superuser)
+        #   return HttpResponse(request.user.is_superuser)
         return redirect('ans')
 
 
     else:
-      #  return HttpResponse(request.user.is_superuser)
+        #  return HttpResponse(request.user.is_superuser)
 
         # return HttpResponse("admin page")
         return index(request)
@@ -91,10 +91,9 @@ def create(request):
     source_id = request.GET['source']
     source = Source.objects.get(pk=source_id)
     type = request.GET['type']
-    question_details = Ask(name=title, content=content,is_visible=True,Answer_type = type ,Source_fk=source)
+    question_details = Ask(name=title, content=content, is_visible=True, Answer_type=type, Source_fk=source)
     question_details.save()
     return redirect('/myadmin')
-
 
 
 def add_question(request):
@@ -158,11 +157,11 @@ def group(request):
             sum = 0
             for i in range(5):
                 sum = sum + mylist[i + 1]
-                pw =pw + mylist[i + 1] * i + 1
+                pw = pw + mylist[i + 1] * i + 1
             if pw / 5 > sum:
                 mylist[7] = 5;
             else:
-                mylist[7] = round(pw / sum,2)
+                mylist[7] = round(pw / sum, 2)
             new = {key: mylist}
             mydict.update(new)
 
@@ -182,50 +181,73 @@ def home(request):
 def scanndemo(request):
     return render(request, 'demo.html')
 
+
 def scann(request):
     return render(request, 'scann.html')
 
-def scann_info(request,qr,place,branch,waiter):
 
-   #return HttpResponse(qr+place+branch+waiter)
-    source=Source.objects.get(pk=place)
+def scann_info(request, qr, place, branch, waiter):
+    # return HttpResponse(qr+place+branch+waiter)
+    source = Source.objects.get(pk=place)
     branch = Branch.objects.get(pk=branch)
     waiter = Waiters.objects.get(pk=waiter)
     questions = Ask.objects.all()
     answers = Ans.objects.all()
     context = {
-            'source': source,
-            'branch': branch,
-            'waiter': waiter,
-            'questions': questions,
-            'answers': answers
-        }
+        'source': source,
+        'branch': branch,
+        'waiter': waiter,
+        'questions': questions,
+        'answers': answers
+    }
     return render(request, 'Ans.html', context)
-    #return HttpResponse( waiter.W_Name)
-def thanks (request):
-    return render(request,'Thanks.html')
-def signup(request):
-     # if request.method == 'POST':
-        fname=request.POST.get('inputName')
-        lname=request.POST.get('inputName')
 
+
+# return HttpResponse( waiter.W_Name)
+def thanks(request):
+    return render(request, 'Thanks.html')
+
+
+# first_name=models.CharField(max_length=150 ,default=None)
+#    last_name=models.CharField(max_length=150)
+#    phone_number=models.CharField(max_length=20)
+#    Email=models.EmailField()
+#    role=models.IntegerField(max_length=1,default=0)
+#    password=models.CharField(max_length=150 ,default=None)
+#    incentive=models.BooleanField(default=False)
+def signup(request):
+    if request.method == 'POST':
+        fname = request.POST.get('inputfirstName')
+        lname = request.POST.get('inputLastName')
         email = request.POST.get('inputEmail')
         pword = request.POST.get('inputPassword')
         phone_num = request.POST.get('phone_number')
-        gift=True
+        gift = True
 
-        user=person(first_name=fname,last_name=lname,phone_number=phone_num,Email=email,password=pword,incentive=gift)
+        user = person(first_name=fname, last_name=lname, phone_number=phone_num, Email=email, role=0, password=pword,
+                      incentive=gift)
         user.save()
-        return HttpResponse ("you sign up ,thanks")
-    # else:
-    #     return render(request,'signup.html')
+        return HttpResponse("Thanks for signup")
+    else:
+        return render(request, 'signup.html')
+
 
 def tosignup(request):
     return render(request, 'signup.html')
 
 
+def login(request):
+  if request.method == 'POST':
+    email = request.POST.get('Email')
+    passw = request.POST.get('password')
+    try:
+      Person = person.objects.filter(Email=email)
+    except person.DoesNotExist:
+          Person = None
+          return HttpResponse(Person+"mfish")
+    return HttpResponse(str(email)+"email")
+  else:
+      return HttpResponse("no form")
 
-
-
-
-
+def tologin (request):
+    return render(request,'login.html')
