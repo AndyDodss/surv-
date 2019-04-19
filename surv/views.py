@@ -217,17 +217,18 @@ def thanks(request):
 #    incentive=models.BooleanField(default=False)
 def signup(request):
     if request.method == 'POST':
-        fname = request.POST.get('inputfirstName')
-        lname = request.POST.get('inputLastName')
-        email = request.POST.get('inputEmail')
-        pword = request.POST.get('inputPassword')
-        phone_num = request.POST.get('phone_number')
+        pword = request.POST.get('ppassword')
+        fname = request.POST.get('firstname')
+        lname = request.POST.get('lastname')
+        email = request.POST.get('email')
+
+        phone_num = request.POST.get('phone')
         gift = True
 
         user = person(first_name=fname, last_name=lname, phone_number=phone_num, Email=email, role=0, password=pword,
                       incentive=gift)
         user.save()
-        return HttpResponse("Thanks for signup")
+        return HttpResponse(fname)
     else:
         return render(request, 'signup.html')
 
@@ -238,14 +239,14 @@ def tosignup(request):
 
 def login(request):
   if request.method == 'POST':
-    email = request.POST.get('Email')
-    passw = request.POST.get('password')
+    email = request.POST.get('firstname')
+    passw = request.POST.get('pass')
     try:
-      Person = person.objects.filter(Email=email)
+      Person = person.objects.filter(first_name=email)
     except person.DoesNotExist:
           Person = None
-          return HttpResponse(Person+"mfish")
-    return HttpResponse(str(email)+"email")
+          return HttpResponse(Person)
+    return HttpResponse(str(passw)+"email")
   else:
       return HttpResponse("no form")
 

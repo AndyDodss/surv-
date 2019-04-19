@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
+from pyomo.solvers.tests.mip.test_asl import mock_all
+
+
 class person(models.Model):
     first_name=models.CharField(max_length=150 ,default=None,null=True)
     last_name=models.CharField(max_length=150,null=True)
@@ -16,6 +19,7 @@ class person(models.Model):
 class Source(models.Model):
     SName = models.CharField(max_length=150)
     Logo = models.ImageField(upload_to='pictures/Source_logos/', blank=False)
+    Admin=models.ForeignKey(person,on_delete=models.CASCADE,default=None)
 
 
 class Branch(models.Model):

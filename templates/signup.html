@@ -31,76 +31,31 @@
 
  <div class="container" align="center">
 
- <div class="row">
-
-   <div class="col-md-3″></div>
-
-   <div class="col-md-5″>
+ <form method="post" action="signup">
 
 
+            {%  csrf_token %}
 
-   <hr>
+            <label class="form-group" for="firstname">First name: </label>
+            <input class="form-control" type="password" name="firstname" id="firstname" required="True"><br>
 
-<form method="POST" action="/signup" >
-{%  csrf_token %}
-
-
-<div class="form-group">
-
-       <label for="inputName">FirstName</label>
-
-       <input type="text" class="form-control" id="inputfirstName" placeholder="Name">
-
-   </div>
-
-<div class="form-group">
-
-       <label for="inputLastName">LastName</label>
-
-       <input type="text" class="form-control" id="inputLastName" placeholder="LastName">
-
-   </div>
-
-   <div class="form-group">
-
-       <label for="inputEmail">Email</label>
-       <input type="Email" class="form-control" id="inputEmail" placeholder="Email">
-
-   </div>
-
-   <div class="form-group">
-
-       <label for="inputPassword">Password</label>
-
-       <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-
-   </div>
-
- <div class="form-group">
-
-       <label for="inputrePassword">Retype Password</label>
-
-       <input type="password" class="form-control" id="inputrePassword" placeholder="Retype Password">
-
-   </div>
-    <div class="form-group">
-
-       <label for="phone_number">Phone</label>
-
-       <input type="phone" class="form-control" id="phone_number" placeholder="Phone">
-
-   </div>
+            <label class="form-group" for="lastname">Last name: </label>
+            <input class="form-control" type="text"  name="lastname" id="lastname"  required="True"><br>
 
 
+            <label class="form-group" for="Email">Email: </label>
+            <input class="form-control" type="Email"  name="Email" id="email"  required="True"><br>
 
-        <input class="btn btn-success active" type="submit" value="Register">
+            <label class="form-group" for="password">Password: </label>
+            <input class="form-control" type="password" name="content" name="password" id="password"  required="True"><br>
 
-</form>
+            <label class="form-group" for="phone">Phone: </label>
+            <input class="form-control" type="phone" name="phone" id="phone"  required="True"><br>
+
+            <input class="btn btn-success" type="submit" value="signup">
 
 
-</div>
-
-</div>
+        </form>
 
  </div>
 </body>
