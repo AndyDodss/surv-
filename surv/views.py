@@ -238,17 +238,126 @@ def tosignup(request):
 
 
 def login(request):
-  if request.method == 'POST':
-    email = request.POST.get('firstname')
-    passw = request.POST.get('pass')
-    try:
-      Person = person.objects.filter(first_name=email)
-    except person.DoesNotExist:
-          Person = None
-          return HttpResponse(Person)
-    return HttpResponse(str(passw)+"email")
-  else:
-      return HttpResponse("no form")
+    if request.method == 'POST':
+        firstname = request.POST.get('firstname')
+        Password = request.POST.get('pass')
+        try:
+            Person = person.objects.get(first_name=firstname, password=Password)
+        except person.DoesNotExist:
+            Person = None
 
-def tologin (request):
-    return render(request,'login.html')
+        # return HttpResponse(Person)
+
+        pid = Person.id
+        if Person.role == 1:
+            source = Source.objects.get(fk_Admin=pid)
+
+            Question = Ask.objects.filter(Source_fk=source.id)
+            for q in Question:
+
+                Answer = Ans.objects.filter(Question_id=q.id)
+                Answer |= Answer
+                mydict = {}
+                for question in Question:
+                    mylist = ['', 0, 0, 0, 0, 0, '', 0.0]
+                    for answer in Answer:
+                        if question.id == answer.Question_id.id:
+                            mylist[0] = question.name
+                            mylist[6] = question.content
+                            # could be for loop depends on integer neeed change at model
+                            if answer.rate == '1':
+                                mylist[1] = mylist[1] + 1
+
+                            if answer.rate == '2':
+                                mylist[2] = mylist[2] + 1
+
+                            if answer.rate == '3':
+                                mylist[3] = mylist[3] + 1
+
+                            if answer.rate == '4':
+                                mylist[4] = mylist[4] + 1
+
+                            if answer.rate == '5':
+                                mylist[5] = mylist[5] + 1
+                    if mylist[0] != '':
+                        key = mylist[0]
+                        # del mylist[0]
+                        avg = mylist[1:6]
+                        pw = 0
+                        sum = 0
+                        for i in range(5):
+                            sum = sum + mylist[i + 1]
+                            pw = pw + mylist[i + 1] * i + 1
+                        if pw / 5 > sum:
+                            mylist[7] = 5;
+                        else:
+                            mylist[7] = round(pw / sum, 2)
+                        new = {key: mylist}
+                        mydict.update(new)
+
+
+            context = {
+                'role': Person.role,
+                'questions': Question,
+                'answers': Answer,
+                'mydict': mydict
+            }
+            return render(request, 'test.html', context)
+        if Person.role == 2:
+            Question = Ask.objects.all()
+            Answer = Ans.objects.all()
+
+            mydict = {}
+            for question in Question:
+                mylist = ['', 0, 0, 0, 0, 0, '', 0.0]
+                for answer in Answer:
+                    if question.id == answer.Question_id.id:
+                        mylist[0] = question.name
+                        mylist[6] = question.content
+                        # could be for loop depends on integer neeed change at model
+                        if answer.rate == '1':
+                            mylist[1] = mylist[1] + 1
+
+                        if answer.rate == '2':
+                            mylist[2] = mylist[2] + 1
+
+                        if answer.rate == '3':
+                            mylist[3] = mylist[3] + 1
+
+                        if answer.rate == '4':
+                            mylist[4] = mylist[4] + 1
+
+                        if answer.rate == '5':
+                            mylist[5] = mylist[5] + 1
+                if mylist[0] != '':
+                    key = mylist[0]
+                    # del mylist[0]
+                    avg = mylist[1:6]
+                    pw = 0
+                    sum = 0
+                    for i in range(5):
+                        sum = sum + mylist[i + 1]
+                        pw = pw + mylist[i + 1] * i + 1
+                    if pw / 5 > sum:
+                        mylist[7] = 5;
+                    else:
+                        mylist[7] = round(pw / sum, 2)
+                    new = {key: mylist}
+                    mydict.update(new)
+
+        context = {
+            'role': Person.role,
+            'questions': Question,
+            'answers': Answer,
+            'mydict': mydict
+               }
+        return render(request, 'index.html', context)
+
+
+
+    else:
+        return render(request, 'login.html')
+
+
+def tologin(request):
+    return render(request, 'login.html')

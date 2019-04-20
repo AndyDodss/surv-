@@ -8,7 +8,7 @@ from pyomo.solvers.tests.mip.test_asl import mock_all
 
 class person(models.Model):
     first_name=models.CharField(max_length=150 ,default=None,null=True)
-    last_name=models.CharField(max_length=150,null=True)
+    last_name=models.CharField(max_length=150 ,default=None,null=True)
     phone_number=models.CharField(max_length=20,null=True)
     Email=models.EmailField(null=True)
     role=models.IntegerField(max_length=1,default=0,null=True)
@@ -19,7 +19,7 @@ class person(models.Model):
 class Source(models.Model):
     SName = models.CharField(max_length=150)
     Logo = models.ImageField(upload_to='pictures/Source_logos/', blank=False)
-    Admin=models.ForeignKey(person,on_delete=models.CASCADE,default=None)
+    fk_Admin=models.ForeignKey(person,on_delete=models.CASCADE,default=None,null=True)
 
 
 class Branch(models.Model):
@@ -43,10 +43,10 @@ class Ask(models.Model):
 
 
 class Ans(models.Model):
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
+    user_id = models.ForeignKey(person, on_delete=models.CASCADE,blank=True, null=True)
     # done = models.BooleanField()
-    rate = models.CharField(max_length=1)
-    Answer_comment = models.TextField(default=None)
+    rate = models.CharField(max_length=1,blank=True, null=True)
+    Answer_comment = models.TextField(blank=True, null=True)
     Waiter_fk = models.ForeignKey(Waiters, on_delete=models.CASCADE, default=None)
     Time = models.TimeField(blank=False, default=None)
     Date = models.DateField(blank=False, default=None)
