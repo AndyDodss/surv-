@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+
+    <link rel="stylesheet" href="cs.css">
+<meta name="viewport" content="width=device-width, initial-scale=1″>
+
+<link rel="stylesheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+ <link rel="stylesheet" href="main.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+ <header>
+        <nav class="navbar navbar-light" style="background-color: #343a40;">
+            <div class="container">
+               <h4 style="color:#fff; ">Welcome {{request.user.username}}</h4>
+            </div>
+</nav>
+    </header>
+
+
+
+ <div class="container" align="center">
+
+ <form method="post" action="signup">
+
+
+            {%  csrf_token %}
+
+            <label class="form-group" for="firstname">First name: </label>
+            <input class="form-control" type="password" name="firstname" id="firstname" required="True"><br>
+
+            <label class="form-group" for="lastname">Last name: </label>
+            <input class="form-control" type="text"  name="lastname" id="lastname"  required="True"><br>
+
+
+            <label class="form-group" for="Email">Email: </label>
+            <input class="form-control" type="Email"  name="password" id="email"  required="True"><br>
+
+            <label class="form-group" for="password">Password: </label>
+            <input class="form-control" type="password" name="password" name="password" id="password"  required="True"><br>
+
+            <label class="form-group" for="phone">Phone: </label>
+            <input class="form-control" type="phone" name="phone" id="phone"  required="True"><br>
+             <input class="form-control" type="hidden" name="role" value="0"  required="True">
+
+            <input class="btn btn-success" type="submit" value="signup">
+
+
+        </form>
+
+ </div>
+</body>
+
+</html>
