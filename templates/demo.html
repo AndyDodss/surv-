@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>QR Code Scanner Example</title>
+
+
+    <style>
+        body
+        {
+          background-color: #343a40;
+        }
+        .outer-div
+        {
+          padding: 1%;
+          margin : 15%;
+          margin-top:5%;
+          background-color: #f3f3f3;
+          text-align:center;
+        }
+        .inner-div
+        {
+          margin: auto;
+          width: 90%;
+          height: 70%;
+          border-radius: 3px;
+
+        }
+    </style>
+
+  </head>
+
+  <body class="cont">
+    <div class="outer-div">
+    <h1 class="h1">Scann you QR Code</h1>
+
+
+        <section class="browser-default custom-select" >
+            <div class="frm-grp txt-cntr">
+				<label class="disp-blck">Choose camera:</label><br>
+				<select id="webcameraChanger" onchange="cameraChange($(this).val());" class="browser-default custom-select"></select>
+			</div>
+            <!-- webcamera view component -->
+          <div class="inner-div"><br> <video id="webcameraPreview" playsinline ="width: 80%;height:70%;"></video></div>
+        </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="static/qr/adapter.min.js"></script>
+    <script type="text/javascript" src="static/qr/instascan.js"></script>
+    <script type="text/javascript" src="static/qr/QrCodeScanner.js"></script>
+    <script type="text/javascript">
+        //HTML video component for web camera
+        var videoComponent = $("#webcameraPreview");
+        //HTML select component for cameras change
+        var webcameraChanger = $("#webcameraChanger");
+        var options = {};
+        //init options for scanner
+        options = initVideoObjectOptions("webcameraPreview");
+        var cameraId = 0;
+
+        initScanner(options);
+
+        initAvaliableCameras(
+            webcameraChanger,
+            function () {
+                cameraId = parseInt(getSelectedCamera(webcameraChanger));
+            }
+        );
+
+        initCamera(cameraId);
+
+
+        scanStart(function (data){
+            var link = data.replace('?','');
+      var clean = link.replace('http://127.0.0.1:8000','https://survshow.herokuapp.com');
+      $(location).attr('href',clean);
+        });
+
+    </script>
+    </div>
+  </body>
+</html>
