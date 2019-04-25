@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="6dbef9e5-591b-48a3-a87e-5f2e45888037" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/surv/static/qr/QrCodeScanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/surv/static/qr/QrCodeScanner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/demo.html" afterDir="false" />
     </list>
+=======
+    <list default="true" id="6dbef9e5-591b-48a3-a87e-5f2e45888037" name="Default Changelist" comment="" />
+>>>>>>> efeaa002b73a8f7f521066a8be126cab1354c6f0
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +77,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/demo.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -87,6 +92,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="59" column="21" lean-forward="true" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/demo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="77" column="72" selection-start-line="77" selection-start-column="72" selection-end-line="77" selection-end-column="72" />
+>>>>>>> efeaa002b73a8f7f521066a8be126cab1354c6f0
             </state>
           </provider>
         </entry>
@@ -147,11 +159,18 @@
         <option value="$PROJECT_DIR$/surv/views.py" />
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/demo.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/surv/static/qr/QrCodeScanner.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+=======
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+>>>>>>> efeaa002b73a8f7f521066a8be126cab1354c6f0
     <option name="x" value="469" />
     <option name="y" value="342" />
     <option name="width" value="697" />
@@ -175,11 +194,16 @@
             <path>
               <item name="survdemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="survdemo" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="media" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="deploy" type="462c0819:PsiDirectoryNode" />
+>>>>>>> efeaa002b73a8f7f521066a8be126cab1354c6f0
             </path>
             <path>
               <item name="survdemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="survdemo" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="surv" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -194,6 +218,9 @@
               <item name="surv" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="qr" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+>>>>>>> efeaa002b73a8f7f521066a8be126cab1354c6f0
             </path>
             <path>
               <item name="survdemo" type="b2602c69:ProjectViewProjectNode" />
@@ -250,7 +277,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+=======
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+>>>>>>> efeaa002b73a8f7f521066a8be126cab1354c6f0
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20982143" />
@@ -332,6 +363,12 @@
     <entry file="file://$PROJECT_DIR$/surv/static/qr/instascan.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/surv/static/qr/QrCodeScanner.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+>>>>>>> efeaa002b73a8f7f521066a8be126cab1354c6f0
     <entry file="file://$PROJECT_DIR$/deploy/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -526,6 +563,7 @@
     <entry file="file://$PROJECT_DIR$/templates/demo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
+<<<<<<< HEAD
           <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
         </state>
       </provider>
@@ -534,6 +572,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="59" column="21" lean-forward="true" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+=======
+          <caret line="77" column="72" selection-start-line="77" selection-start-column="72" selection-end-line="77" selection-end-column="72" />
+>>>>>>> efeaa002b73a8f7f521066a8be126cab1354c6f0
         </state>
       </provider>
     </entry>

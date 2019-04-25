@@ -1,5 +1,6 @@
 {% load static %}
-
+{% if 'person' in request.session %}
+{% ifequal  request.session.person_role 2 %}
 
 <!doctype html>
 <html lang="en">
@@ -16,7 +17,7 @@
  <header>
         <nav class="navbar navbar-light" style="background-color: #343a40;">
             <div class="container">
-               <h4 style="color:#fff; ">Welcome {{request.user.username}}</h4>
+               <h4 style="color:#fff; ">Welcome {{request.session.person_name}}</h4>
             </div>
 </nav>
     </header>
@@ -32,7 +33,7 @@
                 <tr>
                     <th>Title</th>
                     <th>content</th>
-                   
+
                 </tr>
             </thead>
             <tbody>
@@ -42,7 +43,7 @@
                     <tr>
                     <td>{{ question.name }}</td>
                     <td>{{ question.content }}</td>
-                 
+
                     <td>
                         <a class="btn btn-danger" href="/delete/{{ question.id }}">Delete</a>
                     </td>
@@ -58,4 +59,8 @@
 
 </body>
 </html>
+{%endifequal%}
+{% else %}
+{% include 'home.html' %}
 
+{% endif %}

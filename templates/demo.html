@@ -34,16 +34,15 @@
 
   <body class="cont">
     <div class="outer-div">
-    <h1 class="h1">Scann you QR Code</h1>
+    <h1>Scann you QR Code</h1>
 
 
         <section class="browser-default custom-select" >
             <div class="frm-grp txt-cntr">
-				<label class="disp-blck">Choose camera:</label><br>
 				<select hidden id="webcameraChanger" onchange="cameraChange($(this).val());" class="browser-default custom-select"></select>
 			</div>
             <!-- webcamera view component -->
-          <div class="inner-div"><br> <video id="webcameraPreview" playsinline ="width: 80%;height:70%;"></video></div>
+          <div class="inner-div"><br> <video id="webcameraPreview" playsinline autoplay style="width: 80%;height:70%;"></video></div>
         </section>
 
 

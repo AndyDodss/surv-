@@ -1,64 +1,105 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>index</title>
-
-    <link rel="stylesheet" href="cs.css">
-<meta name="viewport" content="width=device-width, initial-scale=1″>
-
-<link rel="stylesheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
- <link rel="stylesheet" href="main.css">
-
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SignUp</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<style type="text/css">
+    body{
+      background: #343a40;
+    }
+	.login-form {
+		width: 60%;
+    	margin: 50px auto;
+	}
+    .login-form form {
+    	margin-bottom: 15px;
+        background: #f7f7f7;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+    .login-form h2 {
+        margin: 0 0 15px;
+    }
+    .form-control, .btn {
+        min-height: 38px;
+        border-radius: 2px;
+    }
+    .btn {
+        font-size: 15px;
+        font-weight: bold;
+    }
+</style>
 </head>
-
 <body>
- <header>
-        <nav class="navbar navbar-light" style="background-color: #343a40;">
-            <div class="container">
-               <h4 style="color:#fff; ">Welcome {{request.user.username}}</h4>
-            </div>
-</nav>
-    </header>
+<div class="login-form">
 
 
 
- <div class="container" align="center">
-
- <form method="post" action="signup">
-
-
-            {%  csrf_token %}
-
-            <label class="form-group" for="firstname">First name: </label>
-            <input class="form-control" type="password" name="firstname" id="firstname" required="True"><br>
-
-            <label class="form-group" for="lastname">Last name: </label>
-            <input class="form-control" type="text"  name="lastname" id="lastname"  required="True"><br>
+ <form method="post" action="signup" >
+                    {%  csrf_token %}
 
 
-            <label class="form-group" for="Email">Email: </label>
-            <input class="form-control" type="Email"  name="password" id="email"  required="True"><br>
+     <div class="form-row">
 
-            <label class="form-group" for="password">Password: </label>
-            <input class="form-control" type="password" name="password" name="password" id="password"  required="True"><br>
+  <div class="form-group col-md-6">
+    <label for="firstname">Firstname</label>
+    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="">
+  </div>
 
-            <label class="form-group" for="phone">Phone: </label>
+    <div class="form-group col-md-6">
+    <label for="lastname">Last Name</label>
+    <input type="text" class="form-control"  name="lastname" id="lastname" placeholder="">
+  </div>
+
+</div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="Email">Email</label>
+      <input type="email" class="form-control" name="email" id="email"placeholder="Email">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+    </div>
+  </div>
+
+
+
+     <label class="form-group col-md-6" for="phone">Phone: </label>
             <input class="form-control" type="phone" name="phone" id="phone"  required="True"><br>
              <input class="form-control" type="hidden" name="role" value="0"  required="True">
 
-            <input class="btn btn-success" type="submit" value="signup">
+  <button type="submit" class="btn btn-dark btn-block">Sign UP</button>
+</form>
 
 
-        </form>
 
- </div>
+</div>
 </body>
-
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

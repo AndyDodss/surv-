@@ -1,4 +1,6 @@
 {% load static %}
+{% if 'person' in request.session %}
+{% ifequal  request.session.person_role 2 %}
 
 
 
@@ -9,20 +11,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>index</title>
+    <title>Detials</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    
+
 </head>
 <body>
  <header>
         <nav class="navbar navbar-light" style="background-color: #343a40;">
             <div class="container">
-               <h4 style="color:#fff; ">Welcome {{request.user.username}}</h4>
+               <h4 style="color:#fff; ">Welcome {{request.session.person_name}}</h4>
             </div>
 </nav>
     </header>
     <div class="container"><br>
-      <h2><a href="myadmin"><button type="button" class="btn btn-dark">Survey</button>
+        <h2><a href="myadmin"><button type="button" class="btn btn-dark">Survey</button></a>
         <a href="/test"><button type="button" class="btn btn-dark">Survey Details</button></a>
 <a href="testall"><button type="button" class="btn btn-dark">User Details</button></a>
         <a style="text-align:right;float:right;" href="/logout"><button type="button" class="btn btn-dark">Log Out</button></a>
@@ -32,33 +34,39 @@
          <table class="table table-dark">
             <thead>
                 <tr>
-                  
+
                     <th>Title</th>
                     <th>Question</th>
                     <th>User</th>
                     <th>Rate of 5</th>
-                   
+
                 </tr>
             </thead>
             <tbody>
                 {% for answer in answers %}
                 {% ifnotequal answer.rate '0'%}
                     <tr>
-                   
+
                     <td>{{ answer.Question_id.name }}</td>
                     <td>{{ answer.Question_id.content }}</td>
                     <td>{{ answer.user_id.first_name }}</td>
                     <td>{{ answer.rate}}</td>
-                 
-                    
+
+
                 </tr>
                 {%endifnotequal%}
                 {% endfor %}
 
             </tbody>
         </table>
-        
+
     </div>
 
 </body>
 </html>
+{%endifequal%}
+
+{% else %}
+{% include 'home.html' %}
+
+{%endif%}

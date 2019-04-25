@@ -1,6 +1,5 @@
 {% load static %}
-
-
+{% if 'person' in request.session %}
 
 <!doctype html>
 <html lang="en">
@@ -9,28 +8,27 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Thanks</title>
+    <title>index</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="cs.css">
 </head>
 <body>
-    <header>
+ <header>
         <nav class="navbar navbar-light" style="background-color: #343a40;">
             <div class="container">
-               <h1 style="color:#fff; ">Surv</h1>
+               <h4 style="color:#fff; ">Welcome {{request.session.person_name}}</h4>
             </div>
 </nav>
     </header>
-   <div class="container"><br>
-
-<h1>Thanks for your survy to join and get gift sign up if you want</h1>
-
-       <a class="btn btn-success" href="/tosignup">Sign up</a>
-
-            </tbody>
-        </table>
+    <div class="container"><br>
+        <div style="text-align:right;"> <a style="text-align:right;" href="/logout"><button type="button" class="btn btn-dark">Log Out</button></a>
 
     </div>
- 
+         <h1>you will get survey soon</h1>
+    </div>
 </body>
 </html>
+{% else %}
+{% include 'home.html' %}
+
+{% endif %}

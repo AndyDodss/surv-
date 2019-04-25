@@ -1,4 +1,5 @@
 {% load static %}
+{% if 'person' in request.session %}
 
 
 <!doctype html>
@@ -8,7 +9,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>index</title>
+    <title>Inforamtion</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="cs.css">
 </head>
@@ -16,14 +17,16 @@
  <header>
         <nav class="navbar navbar-light" style="background-color: #343a40;">
             <div class="container">
-               <h4 style="color:#fff; ">Welcome  {{request.session.person}} </h4>
+               <h4 style="color:#fff; ">Welcome {{request.session.person_name}}</h4>
             </div>
 </nav>
     </header>
  <div class="container"><br>
+     {% ifequal request.session.person_role  1%}
      <div style="text-align:right;"> <a style="text-align:right;" href="/logout"><button type="button" class="btn btn-dark">Log Out</button>
      </a></div>
-    {% ifequal role  2 %}
+     {% endifequal  %}
+    {% ifequal request.session.person_role  2 %}
 
      <h2><a href="myadmin"><button type="button" class="btn btn-dark">Survey</button></a>
 
@@ -43,7 +46,7 @@
  <table class="table table-dark">
             <thead>
                 <tr>
-                  
+
                     <th>Title</th>
                     <th>Question</th>
                     <th>Counts Rate A</th>
@@ -53,7 +56,7 @@
                     <th>Counts Rate E</th>
                     <th>Average</th>
 
-                   
+
                 </tr>
             </thead>
             <tbody>
@@ -166,4 +169,7 @@
 
 </div>
 </body>
+{% else %}
+{% include 'home.html' %}
 
+{%endif%}
