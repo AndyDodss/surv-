@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,6 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>QR Code Scanner Example</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 
 
     <style>
@@ -19,13 +22,14 @@
           margin-top:5%;
           background-color: #f3f3f3;
           text-align:center;
+          border-radius: 20px;
         }
         .inner-div
         {
           margin: auto;
           width: 90%;
           height: 70%;
-          border-radius: 3px;
+          border-radius: 20px;
 
         }
     </style>
@@ -33,17 +37,28 @@
   </head>
 
   <body class="cont">
+  <div class="login-form">
     <div class="outer-div">
     <h1>Scann you QR Code</h1>
 
 
-        <section class="browser-default custom-select" >
-            <div class="frm-grp txt-cntr">
-				<select  id="webcameraChanger" onchange="cameraChange($(this).val());" class="browser-default custom-select"></select>
-			</div>
+
+              <div class="row">
+          <div class="col-md-6 select-outline">
+
+            <select class="mdb-select md-form colorful-select dropdown-primary"  id="webcameraChanger" onchange="cameraChange($(this).val());" >
+
+            </select>
+            <label>Example label</label>
+
+          </div>
+        </div>
+
+
             <!-- webcamera view component -->
           <div class="inner-div"><br> <video id="webcameraPreview" playsinline autoplay style="width: 80%;height:70%;"></video></div>
-        </section>
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -74,11 +89,12 @@
 
         scanStart(function (data){
             var link = data.replace('?','');
-      var clean = link.replace('http://127.0.0.1:8000','https://survbetter.herokuapp.com');
+      var clean = link.replace('http://127.0.0.1:8000','https://survshow.herokuapp.com');
       $(location).attr('href',clean);
         });
 
     </script>
+    </div>
     </div>
   </body>
 </html>
