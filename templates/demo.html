@@ -1,6 +1,5 @@
 {% load static %}
 
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,6 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>QR Code Scanner Example</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 
 
     <style>
@@ -17,7 +17,6 @@
         }
         .outer-div
         {
-
           padding: 1%;
           margin : 15%;
           margin-top:5%;
@@ -33,20 +32,21 @@
 
         }
     </style>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 
   </head>
 
   <body class="cont">
-  < class="login-form">
-
+    <div class="outer-div">
     <h1>Scann you QR Code</h1>
 
 
+        <section class="browser-default custom-select" >
+            <div class="frm-grp txt-cntr">
 				<select  id="webcameraChanger" onchange="cameraChange($(this).val());" class="browser-default custom-select"></select>
-			</>
+			</div>
             <!-- webcamera view component -->
           <div class="inner-div"><br> <video id="webcameraPreview" playsinline autoplay style="width: 80%;height:70%;"></video></div>
+        </section>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
